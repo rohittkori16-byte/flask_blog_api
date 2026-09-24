@@ -11,7 +11,7 @@ from flask_jwt_extended import JWTManager
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = "super-secret"
 jwt = JWTManager(app)
-database_url = "mongodb+srv://kalyanrambhukya69_db_user:Ks012606@cluster0.b5b4wpp.mongodb.net/?appName=Cluster0"
+
 
 
 mongo_client = MongoClient(database_url)
