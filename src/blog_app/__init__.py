@@ -11,7 +11,7 @@ from flask_jwt_extended import JWTManager
 app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = "super-secret"
 jwt = JWTManager(app)
-
+database_url = "mongodb+srv://rohittkori16_db_user:P5mKz3DN3ab4R3rN@cluster0.bzrbwlz.mongodb.net/?appName=Cluster0"
 
 
 mongo_client = MongoClient(database_url)
@@ -79,7 +79,7 @@ def handle_add_blog():
                     "title": title,
                     "content": content,
                     "updated_at": datetime.now(),
-                    "status":
+                    "status":"drift"
                 }
             }
         },
